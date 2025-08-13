@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HCA — Contact</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#0b0b0c;--muted:#6b7280;--btn:#0f172a}
+*{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+.container{max-width:860px;margin:0 auto;padding:0 20px}
+.topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid #eee}
+.topbar-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:900}.nav{display:flex;gap:18px}.nav a{font-weight:700;font-size:14px;text-decoration:none;color:inherit}
+.section{padding:28px 0}
+.card{border:1px solid #e5e7eb;border-radius:16px;background:#fff;padding:18px;box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.card h3{margin:6px 0}.meta{color:var(--muted);font-size:13px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid #e5e7eb;border-radius:12px;font:inherit}
+.btn{display:inline-block;padding:12px 16px;border-radius:12px;background:#0f172a;color:#fff;font-weight:800;border:none;cursor:pointer}
+.wa-group{display:flex;gap:12px;flex-wrap:wrap}
+.wa-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;background:#0f172a;color:#fff;font-weight:800;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.wa-btn svg{width:20px;height:20px;fill:#fff}
+@media (max-width:680px){.wa-group{flex-direction:column}.wa-btn{justify-content:center}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="container topbar-inner">
+  <div class="logo">HCA • Since 1910</div>
+  <nav class="nav">
+    <a href="HCA_Homepage.html">Home</a>
+    <a href="HCA_Garments.html">Garments</a>
+    <a href="HCA_Leather.html">Leather</a>
+    <a href="HCA_Mattress_Hub.html">Mattresses</a>
+    <a href="HCA_Guides.html">Guides</a>
+    <a href="HCA_Heritage.html">Heritage</a>
+    <a href="HCA_Contact.html">Contact</a>
+  </nav>
+</div></header>
+
+<div class="section"><div class="container">
+  <div class="card" id="demo">
+    <h3>Book a demo</h3>
+    <p class="meta">Tell us your application and preferred time; we’ll confirm by email/WhatsApp.</p>
+    <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <input placeholder="Name" />
+      <input placeholder="Company" />
+      <input placeholder="Email" />
+      <input placeholder="Phone / WhatsApp" />
+      <select><option>Vertical</option><option>Garments</option><option>Leather & Heavy-Duty</option><option>Mattresses</option></select>
+      <select><option>Application</option><option>Pattern Sewing</option><option>Buttonhole</option><option>Mattress — Tape-edge</option><option>Mattress — Quilting</option></select>
+    </div>
+    <div style="height:10px"></div>
+    <textarea rows="4" placeholder="Notes / preferred date & time"></textarea>
+    <div style="height:10px"></div>
+    <button class="btn">Submit (mock)</button>
+  </div>
+
+  <div class="card" id="rfq" style="margin-top:18px">
+    <h3>WhatsApp Business</h3>
+    <div class="wa-group">
+      <a class="wa-btn" target="_blank" rel="noopener"
+         aria-label="Message HCA on WhatsApp (+91 88600 86712)"
+         href="https://wa.me/918860086712?text=Hi%20HCA%2C%20I%27m%20interested%20in%20your%20machines.%20Please%20share%20details.">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.01 0C5.38 0 .01 5.37.01 12c0 2.11.55 4.17 1.6 6L0 24l6.17-1.6a11.95 11.95 0 0 0 5.84 1.48h.01c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.5-8.4zM12.02 22a9.94 9.94 0 0 1-5.07-1.39l-.36-.21-3.66.96.98-3.56-.24-.37A9.95 9.95 0 1 1 22 12c0 5.51-4.48 10-9.98 10zm5.82-7.47c-.32-.16-1.86-.92-2.15-1.03-.29-.11-.5-.16-.71.16-.21.32-.81 1.03-.99 1.24-.18.21-.36.24-.68.08-.32-.16-1.36-.5-2.59-1.6-.96-.86-1.6-1.92-1.78-2.24-.18-.32-.02-.5.14-.66.15-.15.32-.4.48-.61.16-.21.21-.36.32-.61.11-.24.05-.45-.03-.61-.08-.16-.71-1.71-.98-2.35-.26-.63-.53-.55-.71-.56h-.61c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63 0 1.55 1.12 3.05 1.28 3.26.16.21 2.2 3.36 5.33 4.7.74.32 1.32.51 1.77.66.74.24 1.41.21 1.93.13.59-.09 1.86-.76 2.13-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.61-.37z"/></svg>
+        <span>+91 88600 86712</span>
+      </a>
+      <a class="wa-btn" target="_blank" rel="noopener"
+         aria-label="Message HCA on WhatsApp (+91 93133 08705)"
+         href="https://wa.me/919313308705?text=Hi%20HCA%2C%20I%27m%20interested%20in%20your%20machines.%20Please%20share%20details.">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0 0 12.01 0C5.38 0 .01 5.37.01 12c0 2.11.55 4.17 1.6 6L0 24l6.17-1.6a11.95 11.95 0 0 0 5.84 1.48h.01c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.5-8.4zM12.02 22a9.94 9.94 0 0 1-5.07-1.39l-.36-.21-3.66.96.98-3.56-.24-.37A9.95 9.95 0 1 1 22 12c0 5.51-4.48 10-9.98 10zm5.82-7.47c-.32-.16-1.86-.92-2.15-1.03-.29-.11-.5-.16-.71.16-.21.32-.81 1.03-.99 1.24-.18.21-.36.24-.68.08-.32-.16-1.36-.5-2.59-1.6-.96-.86-1.6-1.92-1.78-2.24-.18-.32-.02-.5.14-.66.15-.15.32-.4.48-.61.16-.21.21-.36.32-.61.11-.24.05-.45-.03-.61-.08-.16-.71-1.71-.98-2.35-.26-.63-.53-.55-.71-.56h-.61c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63 0 1.55 1.12 3.05 1.28 3.26.16.21 2.2 3.36 5.33 4.7.74.32 1.32.51 1.77.66.74.24 1.41.21 1.93.13.59-.09 1.86-.76 2.13-1.49.26-.73.26-1.35.18-1.49-.08-.13-.29-.21-.61-.37z"/></svg>
+        <span>+91 93133 08705</span>
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

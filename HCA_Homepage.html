@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HCA — Heritage Meets Automation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#ffffff; --ink:#0b0b0c; --muted:#6b7280; --btn:#0f172a}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid #eee}
+.topbar-inner{max-width:1260px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;letter-spacing:.2px}
+.nav{display:flex;gap:18px}.nav a{font-weight:700;font-size:14px}
+.hero{min-height:72vh;display:grid;place-items:center;background:linear-gradient(180deg,#fff,#f7f9fc)}
+.hero .inner{max-width:1260px;margin:0 auto;padding:64px 20px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.kicker{letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:800;font-size:12px}
+.display{font-weight:900;line-height:1.05;font-size:54px;margin:8px 0 10px}
+.sub{opacity:.85;font-size:18px;max-width:60ch}
+.btn{display:inline-block;margin-top:14px;padding:12px 18px;border-radius:999px;font-weight:800;background:var(--btn);color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.15)}
+.btn.alt{background:#fff;color:#111;border:1px solid #111}
+.section{padding:44px 0}
+.container{max-width:1260px;margin:0 auto;padding:0 20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.tile{position:relative;border-radius:18px;overflow:hidden;height:260px;box-shadow:0 20px 56px rgba(0,0,0,.12);display:flex;align-items:flex-end}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tile .pad{position:relative;padding:18px;color:#fff;font-weight:900;text-shadow:0 8px 22px rgba(0,0,0,.55);z-index:1}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.0),rgba(0,0,0,.65))}
+.ribbons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.ribbon{border:1px solid #e5e7eb;border-radius:16px;padding:18px;background:#fff;box-shadow:0 12px 32px rgba(0,0,0,.06)}
+.ribbon h3{margin:4px 0 6px}.meta{color:var(--muted);font-size:13px}
+@media (max-width:980px){.hero .inner{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.ribbons{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">HCA • Since 1910</div>
+    <nav class="nav">
+      <a href="#gateway">Explore</a>
+      <a href="HCA_Garments.html">Garments</a>
+      <a href="HCA_Leather.html">Leather</a>
+      <a href="HCA_Mattress_Hub.html">Mattresses</a>
+      <a href="HCA_Guides.html">Guides</a>
+      <a href="HCA_Heritage.html">Heritage</a>
+      <a href="HCA_Contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="inner">
+    <div>
+      <div class="kicker">Heritage • Innovation • Service</div>
+      <div class="display">Precision That Inspires</div>
+      <p class="sub">Premium industrial sewing & automation since 1910. Explore by category or jump straight to the Mattress hub.</p>
+      <a class="btn" href="HCA_Mattress_Hub.html">Open Mattress Hub</a>
+      <a class="btn alt" href="#gateway">Explore Categories</a>
+    </div>
+    <div></div>
+  </div>
+</section>
+
+<div id="gateway" class="section">
+  <div class="container">
+    <div class="grid-3">
+      <a class="tile" href="HCA_Garments.html">
+        <img src="images/gateway_garments.png" alt="Garments">
+        <div class="pad">Garments</div>
+      </a>
+      <a class="tile" href="HCA_Leather.html">
+        <img src="images/gateway_leather.png" alt="Leather & Heavy-Duty">
+        <div class="pad">Leather & Heavy-Duty</div>
+      </a>
+      <a class="tile" href="HCA_Mattress_Hub.html">
+        <img src="images/gateway_mattresses.png" alt="Mattresses">
+        <div class="pad">Mattresses</div>
+      </a>
+    </div>
+
+    <div class="ribbons">
+      <div class="ribbon">
+        <h3>Pattern Sewing</h3>
+        <p class="meta">Flagship pattern sewers, templates, and automation options. (We’ll link to your spec pages.)</p>
+      </div>
+      <div class="ribbon">
+        <h3>Buttonhole Solutions</h3>
+        <p class="meta">Keyhole, straight, eyelet, and programmable buttonhole lines with clean spec tables and demos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
