@@ -25,16 +25,89 @@ a{color:inherit;text-decoration:none}
 .tile::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,.0),rgba(0,0,0,.65))}
 .panel{display:none;opacity:0;transform:translateY(8px);transition:opacity .25s ease, transform .25s ease}
 .panel.active{display:block;opacity:1;transform:none}
-.card{border:1px solid #e5e7eb;border-radius:16px;background:#fff;padding:16px;box-shadow:0 12px 32px rgba(0,0,0,.06)}
-.card h3{margin:8px 0}.meta{color:var(--muted);font-size:13px}
-.embed{width:100%;height:84vh;border:1px solid #e5e7eb;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.08)}
+/* New styles for the three-column section names inside brand panels */
+.section-columns {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+.section-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.section-btn {
+  font-size: 16px;
+  font-weight: 700;
+  color: #184ebb;
+  background: linear-gradient(90deg, #f5f8fb, #fbfbfb 60%);
+  border-radius: 24px;
+  padding: 12px 28px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  cursor: pointer;
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 4px 14px #e5e7eb;
+  user-select: none;
+  transition: background 0.25s, box-shadow 0.25s;
+  min-width: 200px;
+}
+.section-btn:hover {
+  background: #e1e7f3;
+  box-shadow: 0 6px 24px #c4d0ec;
+}
+
+/* Existing styles for banner, breadcrumb, and section title inside panels */
+.banner {
+  font-weight: 900;
+  line-height: 1.05;
+  font-size: 34px;
+  margin-bottom: 12px;
+  color: #114477;
+  background: linear-gradient(90deg, #f6f8fb, #fff);
+  border-radius: 16px;
+  padding: 28px 22px 12px;
+}
+
+.section-title {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 6px 0 24px 6px;
+  color: #194cc3;
+}
+
+/* WhatsApp buttons and footer styling remain unchanged */
 .wa-group{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
 .wa-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:999px;background:var(--ink);color:#fff;font-weight:800;box-shadow:0 10px 24px rgba(0,0,0,.18)}
 .wa-btn svg{width:20px;height:20px;fill:#fff}
 .wa-btn:hover{filter:brightness(1.06)} .wa-btn:active{transform:scale(.98)}
 .sticky-wa{position:fixed;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-top:1px solid rgba(0,0,0,.08)}
 .sticky-inner{max-width:1260px;margin:0 auto;padding:10px 16px;display:flex;justify-content:center}
-@media (max-width:980px){.grid-3{grid-template-columns:1fr}.wa-group{flex-direction:column}.wa-btn{justify-content:center;width:100%}}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .section-columns {
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px 0;
+    align-items: center;
+  }
+  .section-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .section-btn {
+    min-width: 140px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
 </style>
 </head>
 <body>
@@ -56,8 +129,12 @@ a{color:inherit;text-decoration:none}
     <div class="kicker">Mattresses</div>
     <div class="display">Three brands. One hub.</div>
     <p class="sub">Umit Makina • Atlanta Attachment • Duke Makina</p>
+  </div>
+</section>
 
-    <div class="grid-3" id="mattresses">
+<div id="gateway" class="section">
+  <div class="container">
+        <div class="grid-3" id="mattresses">
       <div class="tile" data-target="panel-umit" role="button" aria-label="Open Umit Makina">
         <img src="umit makina.png" alt="Umit Makina">
         <div class="pad">Umit Makina</div>
@@ -71,40 +148,90 @@ a{color:inherit;text-decoration:none}
         <div class="pad">Duke Makina</div>
       </div>
     </div>
-  </div>
-</section>
+    </div>
+    </div>
+
+
 
 <div class="container" style="padding:22px 20px 100px">
+
+  <!-- Umit Tab -->
   <div class="panel" id="panel-umit">
-    <div class="card"><h3>Umit Makina</h3><p class="meta">Mattress equipment — tape edge, border, quilting & automation.</p>
-      <p><a href="umit.pdf" target="_blank" rel="noopener" style="font-weight:800">Open Umit catalog in a new tab</a></p>
+    <div class="banner">PRODUCT SECTIONS</div>
+    <div class="section-title">Umit Makina</div>
+    <div class="section-columns">
+      <div class="section-column">
+        <a href="Umit_Makina/Spring_mc.html"><div class="section-btn">Spring Machines</div></a>
+        <a href="Umit_Makina/Packaging_mc.html"><div class="section-btn">Packaging Machines</div></a>
+        <a href="Umit_Makina/Special_mc.html"><div class="section-btn">Special Machines</div></a>
+      </div>
+      <div class="section-column">
+        <a href="Umit_Makina/Sealing_mc.html"><div class="section-btn">Sealing Machines</div></a>
+        <a href="Umit_Makina/Bearing_ln.html"><div class="section-btn">Bearing Lines</div></a>
+        <a href="Umit_Makina/Zipper_mc.html"><div class="section-btn">Zipper Machines</div></a>
+        <a href="Umit_Makina/Sponge_mc.html"><div class="section-btn">Sponge Machines</div></a>
+      </div>
+      <div class="section-column">
+        <a href="Umit_Makina/Quilting_mc.html"><div class="section-btn">Quilting Machines</div></a>
+        <a href="Umit_Makina/Conveyors.html"><div class="section-btn">Conveyors</div></a>
+        <a href="Umit_Makina/Curb_mc.html"><div class="section-btn">Curb Machines</div></a>
+      </div>
     </div>
-    <div style="height:10px"></div>
-    <object class="embed" data="umit.pdf#page=1" type="application/pdf">
-      <p>Place <b>umit.pdf</b> in the same folder as this file to view it here.</p>
-    </object>
   </div>
-
+ 
+  <!-- Atlanta Tab -->
   <div class="panel" id="panel-atl">
-    <div class="card"><h3>Atlanta Attachment</h3><p class="meta">Automation for the sleep products industry.</p>
-      <p><a href="atlanta.pdf" target="_blank" rel="noopener" style="font-weight:800">Open Atlanta catalog in a new tab</a></p>
+    <div class="banner">PRODUCT SECTIONS</div>
+    <div class="section-title">Atlanta Attachment</div>
+    <div class="section-columns">
+      <div class="section-column">
+        <a href="Umit_Makina/SpringMc/Spring_mc.html"><div class="section-btn">Border Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Packaging_mc.html"><div class="section-btn">Cover Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Special_mc.html"><div class="section-btn">Cutter Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Special_mc.html"><div class="section-btn">Foundation Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Special_mc.html"><div class="section-btn">Glue Machines</div></a>
+      </div>
+      <div class="section-column">
+        <a href="Umit_Makina/SpringMc/Sealing_mc.html"><div class="section-btn">Label Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Bearing_ln.html"><div class="section-btn">Packaging Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Zipper_mc.html"><div class="section-btn">Panel Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Sponge_mc.html"><div class="section-btn">QuiltingMachines</div></a>
+        <a href="Umit_Makina/SpringMc/Zipper_mc.html"><div class="section-btn">Recycling Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Sponge_mc.html"><div class="section-btn">Ruffler Machines</div></a>
+      </div>
+      <div class="section-column">
+        <a href="Umit_Makina/SpringMc/Quilting_mc.html"><div class="section-btn">Spring Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Conveyors.html"><div class="section-btn">Table</div></a>
+        <a href="Umit_Makina/SpringMc/Curb_mc.html"><div class="section-btn">Tape Ede Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Zipper_mc.html"><div class="section-btn">Tufting Machines</div></a>
+        <a href="Umit_Makina/SpringMc/Sponge_mc.html"><div class="section-btn">Zipper Machines</div></a>
+      </div>
     </div>
-    <div style="height:10px"></div>
-    <object class="embed" data="atlanta.pdf#page=1" type="application/pdf">
-      <p>Place <b>atlanta.pdf</b> in the same folder as this file to view it here.</p>
-    </object>
   </div>
 
+
+
+  <!-- Duke Tab -->
   <div class="panel" id="panel-duke">
-    <div class="card"><h3>Duke Makina</h3><p class="meta">Compression, roll-pack & packaging equipment.</p>
-      <p><a href="duke.pdf" target="_blank" rel="noopener" style="font-weight:800">Open Duke catalog in a new tab</a></p>
+    <div class="banner">PRODUCT SECTIONS</div>
+    <div class="section-title">Duke Makina</div>
+    <div class="section-columns">
+      <div class="section-column">
+        <a href="Duke_Makina/Sofa_mc.html"><div class="section-btn">Sofa & Cushion Compression Machines</div></a>
+        <a href="Duke_Makina/Foam_mc.html"><div class="section-btn">Foam & Sponge Machines</div></a>
+
+      </div>
+      <div class="section-column">
+        <a href="Duke_Makina/Mattress_mc.html"><div class="section-btn">Mattress Machines</div></a>
+        <a href="Duke_Makina/Pillow_mc.html"><div class="section-btn">Pillow Machines</div></a>
+        <a href="Duke_Makina/Sewing_mc.html"><div class="section-btn">Sewing Machines</div></a>
+      </div>
+      <div class="section-column">
+        <a href="Duke_Makina/Sealing_mc.html"><div class="section-btn">Sealing & Gluing Machines</div></a>
+        <a href="Duke_Makina/Bed_mc.html"><div class="section-btn">Bed & Special Machines</div></a>
+      </div>
     </div>
-    <div style="height:10px"></div>
-    <object class="embed" data="duke.pdf#page=1" type="application/pdf">
-      <p>Place <b>duke.pdf</b> in the same folder as this file to view it here.</p>
-    </object>
   </div>
-</div>
 
 <div class="sticky-wa" role="contentinfo">
   <div class="sticky-inner">
