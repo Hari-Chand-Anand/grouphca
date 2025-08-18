@@ -24,36 +24,27 @@ a{color:inherit;text-decoration:none}
 .card h3{margin:6px 0}.meta{color:var(--muted);font-size:13px}
 .btn{display:inline-block;padding:10px 16px;border-radius:999px;background:var(--btn);color:#fff;font-weight:800;box-shadow:0 10px 24px rgba(0,0,0,.18)}
 .thumb-img{width:100%;height:200px;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.12);object-fit:cover}
-    .section-title {
-      text-align: center; margin-top: 34px;
-      font-size: 34px; letter-spacing: 1.3px;
-      color: #0b539b;
-      font-weight: 600;
+    .page-title {
+      text-align: center; margin-top: 34px; font-size: 34px; letter-spacing: 1.3px; color: #0b539b;
+      font-weight: 600; margin-bottom: 12px;
     }
-    .machine-grid {
-      display: flex; flex-wrap: wrap; gap: 38px; justify-content: center;
-      margin-top: 36px; margin-bottom: 56px;
+    .detail-main {
+      display: flex; justify-content: space-around; flex-wrap: wrap; align-items: flex-start;
+      margin: 52px auto 14px; max-width: 1200px;
     }
-    .machine-card {
-      background: #fff; border-radius: 8px;
-      box-shadow: 0 3px 16px #b2bec3a9;
-      padding: 26px 26px 20px; width: 320px; text-align: center;
-      transition: box-shadow 0.2s;
-    }
-    .machine-card:hover { box-shadow: 0 6px 28px #636e720c;}
-    .machine-card img { width: 220px; height: 120px; object-fit: contain;
-      margin-bottom: 20px; margin-top: 6px;}
-    .machine-card-title {
-      font-size: 20px; color: #222;
-      font-weight: 600; min-height: 64px;
-    }
-    .machine-card button {
-      background: #ffffff; color: #0b539b; border: 2px solid #0b539b;
-      border-radius: 22px; padding: 10px 30px;
-      font-size: 16px; cursor: pointer; margin-top: 18px;
-      transition: background .2s, color .2s;
-    }
-    .machine-card button:hover { background: #0b539b; color:#fff;}
+    .detail-photos { flex: 1; min-width: 320px; text-align: center;}
+    .detail-photos img {width: 85%; max-width: 430px; margin-bottom: 22px; border-radius: 8px;}
+    .detail-info { flex: 1.3; min-width: 340px;}
+    h3 { color: #0b539b; margin-top: 26px;}
+    ul,li { text-align: left;}
+    .spec-table { width:100%; background:#f5f8ff; margin-top:12px; border-radius:5px; }
+    .spec-table td{ padding:6px 12px; border-bottom:1px solid #ddecfb; font-size: 16px;}
+    .file-links { margin-top: 22px;}
+    .file-links button {
+      background:#fff; border:2px solid #0b539b; color:#0b539b;
+      padding: 9px 24px; border-radius: 18px; font-size:16px; cursor:pointer;
+      margin-right: 19px; transition: all 0.18s;}
+    .file-links button:hover {background:#0b539b; color:#fff;}
 @media (max-width:980px){.grid-2{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}}
 /* Sticky WA */
 .sticky-wa{position:static;left:0;right:0;bottom:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-top:1px solid rgba(0,0,0,.08)}
@@ -83,58 +74,50 @@ a{color:inherit;text-decoration:none}
   <p class="sub">Your flagship focus areas showcased with premium cards, spec tables and CTAs.</p>
 </div></section>
 
-<div class="section-title">Spring Machines</div>
-  <div class="machine-grid">
-    <div class="machine-card">
-      <img src="py-50.jpeg" alt="PY-50 Automatic Package Spring Machine">
-      <div class="machine-card-title">PY-50 AUTOMATIC PACKAGE SPRING MACHINE</div>
-      <a href="PY_50.html"><button>Go To Detail</button></a>
+<div class="page-title">PY-40 AUTOMATIC PACKAGE SPRING MACHINE</div>
+  <div class="detail-main">
+    <div class="detail-photos">
+      <img src="py-40.jpeg" alt="PY-40 AUTOMATIC PACKAGE SPRING MACHINE">
+      <img src="py-40.jpeg" alt="PY-40 side view">
     </div>
-    <div class="machine-card">
-      <img src="py-40.jpeg" alt="PY-40 Automatic Package Spring Machine">
-      <div class="machine-card-title">PY-40 AUTOMATIC PACKAGE SPRING MACHINE</div>
-      <a href="PY_40.html"><button>Go To Detail</button></a>
+   <div class="detail-info">
+    <h3>Properties</h3>
+    <ul>
+      <li>Fully automatic operation system</li>
+      <li>Continuous operation with cutting backlash or continuous</li>
+      <li>Easy and fast spring size change from the control panel</li>
+      <li>Error-free spring heating system with electronic control</li>
+      <li>Automatic spring release arm</li>
+      <li>Ultrasonic welding unit</li>
+      <li>Soundproofed safety cabinet</li>
+      <li>Automatic cutting unit</li>
+      <li>Ergonomic design guarantees optimum production quantity</li>
+    </ul>
+    <h3>Technical Specifications</h3>
+    <table class="spec-table">
+      <tr><td>Production Capacity:</td><td>80 springs / minute</td></tr>
+      <tr><td>Wire diameter:</td><td>1.30 – 2.00 mm</td></tr>
+      <tr><td>Spring Core diameter:</td><td>42 – 55 mm</td></tr>
+      <tr><td>Welding unit:</td><td>Ultrasonic system</td></tr>
+      <tr><td>Maximum wire weight:</td><td>1,000 kg</td></tr>
+      <tr><td>Spring height without interlining:</td><td>130 – 210 mm</td></tr>
+      <tr><td>Interlining spring height:</td><td>100 – 180 mm</td></tr>
+      <tr><td>Maximum interlining diameter:</td><td>800 mm</td></tr>
+      <tr><td>Spring type:</td><td>Barrel or cylindrical</td></tr>
+      <tr><td>Main Motor:</td><td>8× Servo Motor</td></tr>
+      <tr><td>Spinning wheel motor power:</td><td>1.1 Kw</td></tr>
+      <tr><td>Air Consumption:</td><td>800 liters/min</td></tr>
+      <tr><td>Heat treatment transformer control:</td><td>Electronic switching</td></tr>
+      <tr><td>Mains:</td><td>380 V 3 phase 50 hertz 18 Kw</td></tr>
+      <tr><td>Weight:</td><td>3.747 kg</td></tr>
+      <tr><td>Working Area:</td><td>6250 x 2900 mm</td></tr>
+    </table>
+      <div class="file-links">
+        <a href="PY-40-50.pdf" target="_blank"><button>Brochure</button></a>
+        <button>Video</button>
+      </div>
     </div>
-    <div class="machine-card">
-      <img src="pc-25-30.jpeg" alt="PC-25/30 Fully Automatic Package Spring Stringing Machine">
-      <div class="machine-card-title">PC-25/30 FULLY AUTOMATIC PACKAGE SPRING STRINGING MACHINE</div>
-      <a href="PC_25_30.html"><button>Go To Detail</button></a>
-    </div>
-    <div class="machine-card">
-      <img src="pd-40.jpeg" alt="PD-40 PACKAGE SPRING STRINGING MACHINE">
-      <div class="machine-card-title">PD-40 PACKAGE SPRING STRINGING MACHINE</div>
-      <a href="PD_40.html"><button>Go To Detail</button></a>
-    </div>
-    <div class="machine-card">
-      <img src="pd-50.jpeg" alt="PD-50 PACKAGE SPRING DOUBLE STRING MACHINE">
-      <div class="machine-card-title">PD-50 PACKAGE SPRING DOUBLE STRING MACHINE</div>
-      <a href="PD_50.html"><button>Go To Detail</button></a>
-    </div>
-    <div class="machine-card">
-      <img src="bh-30-40-50.jpeg" alt="BH-30/BH-40/BH-50 BONEL SPRING SCREW MACHINE">
-      <div class="machine-card-title"> BH-30/BH-40/BH-50 BONEL SPRING SCREW MACHINE</div>
-      <a href="BH_30_40_50.html"><button>Go To Detail</button></a>
-    </div>
-    <div class="machine-card">
-      <img src="bd-30-40-50.jpeg" alt="BD-30 / BD-40 / BD-50 BONNEL SPRING STRINGING MACHINE">
-      <div class="machine-card-title">BD-30 / BD-40 / BD-50 BONNEL SPRING STRINGING MACHINE</div>
-      <a href="BD_30_40_50.html"><button>Go To Detail</button></a>
-    </div>
-    <div class="machine-card">
-      <img src="d-20.jpeg" alt="D-20 STRAIGHTENING MACHINE">
-      <div class="machine-card-title">D-20 STRAIGHTENING MACHINE</div>
-      <a href="D_20.html"><button>Go To Detail</button></a>
-    </div>
-    <div class="machine-card">
-      <img src="b-10.jpeg" alt="B-10 WIRE BENDING MACHINE">
-      <div class="machine-card-title">B-10 WIRE BENDING MACHINE</div>
-      <a href="B_10.html"><button>Go To Detail</button></a>
-    </div>
-    <div class="machine-card">
-      <img src="s-10.jpeg" alt="S-10 SPIRAL MACHINE">
-      <div class="machine-card-title">S-10 SPIRAL MACHINE</div>
-      <a href="S_10.html"><button>Go To Detail</button></a>
-    </div>
+  </div>
 
 <div class="sticky-wa" role="contentinfo"><div class="sticky-inner">
   <div class="wa-group">
