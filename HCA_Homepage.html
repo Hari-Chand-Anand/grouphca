@@ -39,9 +39,15 @@
 .sub{opacity:.85;font-size:18px;max-width:60ch}
 .btn{display:inline-block;margin-top:14px;padding:12px 18px;border-radius:999px;font-weight:800;background:var(--btn);color:#fff;box-shadow:0 12px 30px rgba(0,0,0,.15)}
 
-.container{max-width:1300px;margin:0 auto;padding:11px 0}
+.container{max-width:1300px;margin:0 auto;padding:11px 20px}
 .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .ribbons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.ribbons .ribbon h3 {
+  transition: color 0.3s ease;
+}
+.ribbons .ribbon:hover h3 {
+  color: var(--primary); /* Change to your preferred color */
+}
 .ribbon h3{margin:4px 0 6px}.meta{color:var(--muted);font-size:13px}
 /* Cards */
 .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -252,7 +258,7 @@
 .slide-btn {
   display: inline-block;
   padding: 10px 20px;
-  background: var(--btn);
+  background: var(--primary);
   color: white;
   border-radius: 999px;
   font-weight: 600;
@@ -595,7 +601,7 @@
           <div class="dropdown">
             <a href="HCA_AboutUs.html" class="dropdown-item">About Us</a>
             <a href="HCA_Heritage.html" class="dropdown-item">Heritage</a>
-            <a href="HCA_Guides.html" class="dropdown-item">Guides</a>
+            <a href="HCA_Gallery_Hub.html" class="dropdown-item">Gallery</a>
             <a href="#machines" class="dropdown-item">Featured Machines</a>
           </div>
         </li>
@@ -690,7 +696,7 @@
         <div class="pad">Leather & Heavy-Duty</div>
       </a>
       <a class="tile" href="HCA_Mattress_Hub.html">
-        <img src="mattresses.jpeg" alt="Mattresses">
+        <img src="mattress.jpeg" alt="Mattresses">
         <div class="pad">Mattresses</div>
       </a>
     </div>
@@ -745,27 +751,27 @@
   <h2 class="section-title">Featured Machines</h2>
   <p class="muted">A glimpse of what’s possible. Full catalogue with filters & compare coming next.</p>
   <div class="grid-3" style="margin-top:14px">
-    <div class="card">
+    <a href="Duke_G/DY-3020M.html"><div class="card">
       <div class="svg-shot" style="height:220px;background:#0f172a">
-        <img src="dy3020m.jpeg" alt="DY 3020M">
+        <img src="dy3020M.jpeg" alt="DY 3020M">
       </div>
       <h4>DY 3020M</h4>
       <div class="meta">Direct Drive Procedural Floriation Machine</div>
-    </div>
-    <div class="card">
+    </div></a>
+    <a href="Duke_G/DY-630GT.html"><div class="card">
       <div class="svg-shot" style="height:220px;background:#111">
         <img src="dy630gt.jpeg" alt="DY 630GT">
       </div>
       <h4>DY 630GT</h4>
       <div class="meta">Electronic Bar Tacking Pattern Sewing Machine</div>
-    </div>
-    <div class="card">
+    </div></a>
+    <a href="Duke_G/DY-9503-D5.html"><div class="card">
       <div class="svg-shot" style="height:220px;background:#0b1020">
-        <img src="dy9503d4.jpeg" alt="DY 9503-D4">
+        <img src="dy9503d4.jpeg" alt="DY 9503-D5">
       </div>
-      <h4>DY 9503-D4</h4>
-      <div class="meta">Advanced, Intelligent Direct-Drive Single-needle Lockstitch Sewing Machine</div>
-    </div>
+      <h4>DY 9503-D5</h4>
+      <div class="meta">Direct-Drive Single-needle Lockstitch Sewing Machine</div>
+    </div></a>
   </div>
 </div>
 
